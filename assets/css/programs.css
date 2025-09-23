@@ -1,0 +1,172 @@
+/* assets/css/programs.css */
+.programs-section {
+    padding: 100px 0;
+    padding-top: 150px;
+}
+
+.section-title {
+    font-size: 3.2rem;
+    color: var(--heading-color);
+    text-align: center;
+    margin-bottom: 60px;
+    font-weight: 700;
+    position: relative;
+    animation: fadeIn 1s ease-out;
+    text-shadow: 0 0 10px var(--secondary-color);
+}
+
+.program-category-title {
+    font-size: 2rem;
+    color: var(--heading-color);
+    margin-top: 50px;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--accent-color);
+    padding-left: 15px;
+    /* text-shadow: 0 0 5px var(--accent-color);  สีสะท้องแสง*/
+}
+
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.program-item {
+    background: var(--card-bg-color);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s ease;
+    cursor: pointer;
+    border: 1px solid var(--tertiary-color);
+}
+
+.program-item:hover {
+    transform: translateY(-15px);
+    background: linear-gradient(135deg, var(--tertiary-color), var(--primary-color));
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+    animation: glowing-border 2s infinite;
+}
+
+.program-icon {
+    font-size: 3.5rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 5px var(--accent-color));
+}
+
+.program-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--heading-color);
+}
+
+.program-item p {
+    font-size: 1rem;
+    color: var(--secondary-color);
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Initially hidden */
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* แก้ความทึบบล็อกแสดงรายการ! */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: var(--card-bg-color);
+    margin: 5% auto;
+    padding: 40px;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--accent-color);
+    max-width: 800px;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    animation: fadeIn 0.5s ease-out;
+}
+
+.close-btn {
+    color: #fff;
+    float: right;
+    font-size: 3rem;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover, .close-btn:focus {
+    color: var(--accent-color);
+    text-decoration: none;
+    text-shadow: 0 0 10px var(--accent-color);
+}
+
+.modal-links a {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: var(--tertiary-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 8px;
+    margin-right: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-links a:hover {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 255, 0, 0.5);
+}
+
+/* ... (สำหรับบนโทรศัพท์) ... */
+
+@media (max-width: 768px) {
+    .programs-section {
+        padding: 80px 0;
+        padding-top: 100px;
+    }
+    .section-title {
+        font-size: 2.5rem;
+    }
+    .program-category-title {
+        font-size: 1.5rem;
+    }
+    
+    .programs-grid {
+        grid-template-columns: 1fr; /* เปลี่ยนเป็น 1 คอลัมน์สำหรับมือถือ */
+    }
+    
+    .program-item {
+        padding: 20px;
+    }
+
+    /* Modal Styles */
+    .modal-content {
+        width: 90%;
+        margin: 20% auto;
+        padding: 25px;
+    }
+    .close-btn {
+        font-size: 2rem;
+        top: 5px;
+        right: 15px;
+    }
+    .modal-links a {
+        display: block; /* ปุ่มเต็มความกว้างจอ */
+        margin-bottom: 10px;
+    }
+}

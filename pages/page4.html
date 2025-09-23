@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THEGADOR | Flex Gallery</title>
+    
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #00BFFF;
+            --dark-bg: #1a1a1a;
+            --card-bg: #2c2c2c;
+            --text-color: #e0e0e0;
+            --box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        body.one-page-website {
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            font-family: 'Kanit', sans-serif;
+            line-height: 1.6;
+        }
+
+        .main-content {
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .empty-block {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .empty-block-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .empty-block-text {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            color: #b0b0b0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .flex-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .flex-item {
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .flex-item:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+        }
+
+        .flex-item-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+        
+        .flex-item:hover .flex-item-image {
+            transform: scale(1.05);
+        }
+
+        .flex-item-info {
+            padding: 25px;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .flex-item-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        .flex-item-subtitle {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .flex-item-description {
+            font-size: 1rem;
+            color: #aaa;
+            margin-top: 0;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .download-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 18px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s, transform 0.3s;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+        }
+
+        .download-btn:hover {
+            background: #05b349;
+            transform: scale(1.03);
+        }
+        
+        /* Navbar (จากโค้ดเดิม) */
+        .navbar {
+            background-color: transparent;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+        .nav-logo {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .flex-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body class="one-page-website">
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="../main_programs.html" class="nav-logo">Home</a>
+        </div>
+    </nav>
+    
+    <div id="particles-js"></div>
+    <div class="main-content">
+        <div class="container">
+            <div class="empty-block-container">
+                <div class="empty-block">
+                    <h3 class="empty-block-title">คลัง Flex Message 💎</h3>
+                    <p class="empty-block-text">เลือกดูและคัดลอกโค้ด Flex Message สวย ๆ ที่พร้อมใช้งานสำหรับโปรเจกต์ของคุณ</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-gallery">
+            
+            <a href="https://github.com/your-github/repo/simple_bubble.json" target="_blank" class="flex-item">
+                <img src="https://s.imgz.io/2025/09/23/imaged39f2816b98226ac.png" alt="Flex Message Simple Bubble" class="flex-item-image">
+                <div class="flex-item-info">
+                    <h5 class="flex-item-subtitle">Basic Template</h5>
+                    <h4 class="flex-item-title">Flex: Simple Bubble</h4>
+                    <p class="flex-item-description">Flex Message พื้นฐานที่มีรูปภาพและปุ่มกดใช้งานง่าย</p>
+                </div>
+                <div class="download-btn">ดูโค้ด JSON</div>
+            </a>
+            
+            <a href="https://github.com/your-github/repo/carousel.json" target="_blank" class="flex-item">
+                <img src="https://s.imgz.io/2025/09/23/imagee552912c72132668.png" alt="Flex Message Carousel" class="flex-item-image">
+                <div class="flex-item-info">
+                    <h5 class="flex-item-subtitle">Multiple items</h5>
+                    <h4 class="flex-item-title">Flex: Carousel</h4>
+                    <p class="flex-item-description">แสดงหลายรายการในแนวนอนแบบเลื่อนได้ เหมาะสำหรับเมนูสินค้า</p>
+                </div>
+                <div class="download-btn">ดูโค้ด JSON</div>
+            </a>
+            
+            <a href="https://github.com/your-github/repo/special_offer.json" target="_blank" class="flex-item">
+                <img src="https://s.imgz.io/2025/09/23/imagee552912c72132668.png" alt="Flex Message Special Offer" class="flex-item-image">
+                <div class="flex-item-info">
+                    <h5 class="flex-item-subtitle">Promotion</h5>
+                    <h4 class="flex-item-title">Flex: Special Offer</h4>
+                    <p class="flex-item-description">Flex Message สำหรับโปรโมชั่นพิเศษพร้อมรูปภาพและรายละเอียด</p>
+                </div>
+                <div class="download-btn">ดูโค้ด JSON</div>
+            </a>
+
+            <a href="https://github.com/your-github/repo/multi_section.json" target="_blank" class="flex-item">
+                <img src="https://s.imgz.io/2025/09/23/imagee552912c72132668.png" alt="Flex Message Multi-section" class="flex-item-image">
+                <div class="flex-item-info">
+                    <h5 class="flex-item-subtitle">Detailed Information</h5>
+                    <h4 class="flex-item-title">Flex: Multi-section</h4>
+                    <p class="flex-item-description">Flex Message แบบแบ่งส่วนหลายส่วนสำหรับข้อมูลที่ละเอียด</p>
+                </div>
+                <div class="download-btn">ดูโค้ด JSON</div>
+            </a>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="../assets/js/index.js"></script>
+</body>
+</html>

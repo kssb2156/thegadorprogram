@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THEGADOR | SHARELIFF</title>
+    
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        .clickable-text {
+            color: rgb(238, 238, 238);
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .clickable-text:hover {
+            color: red; /* เวลาเอาเมาส์วาง */
+        }
+        .clickable-text:active {
+            color: green; /* ตอนคลิก */
+        }
+        
+        /* CSS ใหม่สำหรับการจัดเรียง */
+        .step-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .step-container .image-container {
+            margin-bottom: 10px;
+        }
+        
+        .step-container .text-container {
+            padding: 0 15px; /* เพิ่ม padding เพื่อให้ข้อความดูดีขึ้น */
+        }
+    </style>
+</head>
+<body class="one-page-website">
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="nav-logo">Home</a>
+        </div>
+    </nav>
+    
+    <div id="particles-js"></div>
+    <div class="main-content">
+        <div class="container">
+            <div class="empty-block-container">
+                <div class="empty-block">
+                    <h3 class="empty-block-title">Share Flex Message(แชร์ Flex)</h3>
+                    <p class="empty-block-text">ระบบ สร้างและแชร์ Flex Message ไปยังห้องแชท LINE <br>พัฒนาโค้ดโดยใช้ ChatGPT เนื่องจากโค้ดจากผู้เชี่ยวชาญมักไม่แจกฟรีขี้งกเกิน</p>
+                </div>
+            </div>
+        </div>
+
+<div class="step-container empty-block-content">
+    <div class="image-container">
+        <img src="https://s.imgz.io/2025/09/23/image4a1ea2eb7531ec11.png"
+             style="cursor: pointer;"
+             onclick="copyLink()">
+    </div>
+    <div class="text-container">
+        <h3 class="empty-block-title">
+            ทดลองใช้งาน LIFF <br>กดที่รูปภาพเพื่อ Copy ลิงก์ LIFF
+        </h3>
+        <h3>*หลังจากนั้นนำไปวางในช่องแชทไลน์ของเราและทดสอบส่ง Flex ได้เลย</h3>
+        <p class="empty-block-text">
+            - ตัวอย่างการสร้าง Github และ LIFF หาดูช่อง Youtube นะครับ
+        </p>                
+    </div>
+</div>
+
+
+<div class="step-container" style="padding: 20px; max-width: 800px; margin: 0 auto; box-sizing: border-box;">
+    <div class="text-container">
+        <h3 class="empty-block-title">1. การสร้าง LIFF</h3>
+        <p class="empty-block-text">
+            กดที่ลิงก์ Github ด้านล่างเพื่อเอาโค้ด และสร้าง Github ของตัวเองเพื่อนำ LIFF ไปใช้<br>
+            - ตัวอย่างการสร้าง Github หาดูช่อง Youtube นะครับ
+        </p>
+        <p class="empty-block-text clickable-text"
+           style="text-decoration: underline; cursor: pointer;"
+           onclick="window.open('https://github.com/freebroletgo/shareflex.git','_blank')">
+            Github
+        </p>
+    </div>
+    <div class="image-container" style="text-align: center; margin-top: 15px;">
+        <img src="https://s.imgz.io/2025/09/23/imagea52e5f2688ee25b6.png" style="max-width: 100%; height: auto; border-radius: 8px;">
+    </div>
+</div>
+
+
+<div class="step-container" style="padding: 20px; max-width: 800px; margin: 0 auto; box-sizing: border-box;">
+    <div class="text-container">
+        <h3 class="empty-block-title">2. เปลี่ยน LIFF ID</h3>
+        <p class="empty-block-text">
+            หลังจากได้โค้ดก่อนหน้าที่เอามาจาก Github แล้วให้ทำการเปลี่ยน<br>
+            LIFF ID ของ LIFF ของบอทที่สร้างไว้<br>
+            - การสร้าง LIFF หาดูจาก Youtube นะครับ
+        </p>
+        <p class="empty-block-text clickable-text"
+           style="text-decoration: underline; cursor: pointer;"
+           onclick="window.open('https://access.line.me/oauth2/v2.1/login?returnUri=%2Foauth2%2Fv2.1%2Fauthorize%2Fconsent%3Fresponse_type%3Dcode%26client_id%3D1576775644%26redirect_uri%3Dhttps%253A%252F%252Faccount.line.biz%252Flogin%252Fline-callback%253FredirectUri%253Dhttps%25253A%25252F%25252Fdevelopers.line.biz%25252Fconsole%25252Fchannel%25252F2008064935%25252Fliff%25252F2008064935-Og6wLX1k%26scope%3Dprofile%26state%3DlcHnLdA7NgnwrPO4Ke1udAWLeZYMQPG&loginChannelId=1576775644&loginState=U7vK12L91xnWI9UEgd8lpL','_blank')">
+            LINE Developers
+        </p>
+    </div>
+    <div class="image-container" style="text-align: center; margin-top: 15px;">
+        <img src="https://s.imgz.io/2025/09/23/imaged2db583c7085e13f.png" style="max-width: 100%; height: auto; border-radius: 8px;">
+    </div>
+</div>
+
+<div class="step-container" style="padding: 20px; max-width: 800px; margin: 0 auto; box-sizing: border-box;">
+    <div class="text-container">
+        <h3 class="empty-block-title">3. นำไปใส่ LINE Developers</h3>
+        <p class="empty-block-text">
+            จากขั้นตอนที่ 2 เมื่อเปลี่ยน LIFF ID เสร็จแล้ว ก็นำลิงก์ Github<br>
+            มาใส่ใน Liff ของ LINE Developers
+        </p>
+        <p class="empty-block-text clickable-text"
+           style="text-decoration: underline; cursor: pointer;"
+           onclick="window.open('https://access.line.me/oauth2/v2.1/login?returnUri=%2Foauth2%2Fv2.1%2Fauthorize%2Fconsent%3Fresponse_type%3Dcode%26client_id%3D1576775644%26redirect_uri%3Dhttps%253A%252F%252Faccount.line.biz%252Flogin%252Fline-callback%253FredirectUri%253Dhttps%25253A%25252F%25252Fdevelopers.line.biz%25252Fconsole%25252Fchannel%25252F2008064935%25252Fliff%25252F2008064935-Og6wLX1k%26scope%3Dprofile%26state%3DlcHnLdA7NgnwrPO4Ke1udAWLeZYMQPG&loginChannelId=1576775644&loginState=U7vK12L91xnWI9UEgd8lpL','_blank')">
+            LINE Developers
+        </p>
+    </div>
+    <div class="image-container" style="text-align: center; margin-top: 15px;">
+        <img src="https://s.imgz.io/2025/09/23/image5f45eee100a7b348.png" style="max-width: 100%; height: auto; border-radius: 8px;">
+    </div>
+</div>
+
+<div class="step-container" style="padding: 20px; max-width: 800px; margin: 0 auto; box-sizing: border-box;">
+    <div class="text-container">
+        <h3 class="empty-block-title">4. นำลิงก์ LIFF ไปใช้งาน</h3>
+        <p class="empty-block-text">
+            หลังจากนำลิงก์ Github มาใส่ Endpoint URL เรียบร้อยแล้ว<br>
+            ก็นำลิงก์ LIFF URL ของเรามาใช้ได้เลย<br>
+            - อย่าลืมเปิด Published ด้วยนะครับ
+        </p>
+        <p class="empty-block-text clickable-text"
+           style="text-decoration: underline; cursor: pointer;"
+        </p>
+    </div>
+    <div class="image-container" style="text-align: center; margin-top: 15px;">
+        <img src="https://s.imgz.io/2025/09/23/imageb2bb07d0c929a87e.png" style="max-width: 100%; height: auto; border-radius: 8px;">
+    </div>
+</div>
+
+        </div> <script>
+        function copyLink() {
+            const link = "https://liff.line.me/2008064935-Og6wLX1k";
+            navigator.clipboard.writeText(link).then(() => {
+                alert("คัดลอกลิงก์ LIFF ร้อยแล้ว ✅");
+            }).catch(err => {
+                alert("ไม่สามารถคัดลอกได้ ❌");
+                console.error(err);
+            });
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="../assets/js/index.js"></script>
+</body>
+</html>

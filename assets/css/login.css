@@ -1,0 +1,116 @@
+/* assets/css/login.css */
+body.login-page {
+    overflow: hidden;
+    /* เปลี่ยนพื้นหลังให้เข้ากับธีมหลัก */
+    background: var(--background-color);
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-container {
+    max-width: 450px;
+    width: 90%;
+    padding: 40px;
+    background-color: var(--card-bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border: 2px solid var(--accent-color); /* เปลี่ยนสีเส้นขอบเป็นสีเน้น */
+    /* ลบแอนิเมชัน glowing-border ออก */
+}
+
+.login-title {
+    font-size: 2.5rem;
+    color: var(--heading-color);
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px var(--accent-color); /* เปลี่ยนสีเงาให้เข้ากับสีเน้น */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--primary-color); /* ใช้สีจากธีมหลัก */
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 10px var(--accent-color);
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    color: var(--secondary-color); /* ใช้สีจากธีมหลัก */
+    font-size: 0.9rem;
+}
+
+.form-check input {
+    margin-right: 10px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    /* เปลี่ยนสีปุ่มให้ใช้สีจากตัวแปร */
+    background: var(--accent-color);
+    color: var(--background-color);
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 191, 255, 0.6); /* เปลี่ยนสีเงาของปุ่ม */
+}
+
+.status-message {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.back-home-btn {
+    display: inline-block;
+    margin-top: 25px;
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 1rem;
+    transition: color 0.3s;
+    text-shadow: 0 0 5px var(--secondary-color);
+}
+
+.back-home-btn:hover {
+    color: var(--accent-color);
+    text-shadow: 0 0 10px var(--accent-color);
+}
+/* ... (สำหรับบนโทรศัพท์) ... */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 20px;
+    }
+    .login-box {
+        max-width: 95%;
+    }
+}
